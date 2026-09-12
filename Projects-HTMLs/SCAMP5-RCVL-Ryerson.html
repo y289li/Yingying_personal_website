@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Compiling CNNs with Cain </title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/mediaqueries.css">
+        <link rel="stylesheet" href="/Projects-CSSs/style-SCAMP5-RCVL-Ryerson.css">
+    </head>
+
+    <!-- Context move in animation -->
+    <script>
+
+    window.addEventListener("DOMContentLoaded", () => {
+    // hard-code all your fade-in element class names
+    const classNames = [
+        ".fade-in-1",
+        ".fade-in-2",
+        ".fade-in-3"
+    ];
+    setTimeout(() => {
+        classNames.forEach(name => {
+        const el = document.querySelector(name);
+        if (el) el.classList.add("visible");
+        });
+    }, 100);
+    });
+
+    </script>
+
+    <body>
+
+        <section id="projects">
+
+            <h1 class="full-project-title fade-in-1">Compiling CNNs with Cain: focal-plane processing for robot navigation
+            </h1>
+
+            <div class="text-container fade-in-2">
+
+                <p class="people">
+                    <br> <strong style="font-weight: 700;"> Robotics and Computer Vision Lab - Toronto Metropolitan University, Canada</strong>  <br>
+                    Member(s) : Abrar Ahsan, Yingying Li, Ali Babaei  <br>
+                    Supervisor(s) : Dr. Sajad Saeedi 
+                </p>
+
+                <p class="Full-Project-text">
+                    <br>
+                    &nbsp;&nbsp;&nbsp;
+                   Traditional vision systems transfer images from a camera to a separate processor, adding latency 
+                   and energy costs. SCAMP-5 processes images directly on the sensor, but its limited memory and lack 
+                   of multipliers make CNN implementation difficult. This study introduces Cain, a compiler that generates 
+                   efficient code for multiple convolution kernels by reusing common computations and using simple operations 
+                   instead of multiplication. It also presents AnalogNavNet, a lightweight convolutional nerual network (CNN) for robot autonumous navigation and
+                    collision avoidance, evaluated through ROS/Gazebo simulations and real-world experiments. The SCAMP-5 navigation system achieved 85 FPS and an 85% navigation success rate, 
+                   matching the tested GPU system’s success rate while using approximately 15% of its energy per frame. <br>
+                </p>
+
+                <p class="Full-Project-text">
+                     <br>&nbsp;&nbsp;&nbsp;
+                    SCAMP-5 is a vision sensor that can capture and process images directly on the same chip. Its 256 × 256 
+                    pixel array contains a small processing element at each pixel, allowing all pixels to perform the
+                     same operation in parallel. These processors can store pixel values, exchange data with neighboring pixels, 
+                     and perform simple operations such as addition, subtraction, and division by two. 
+                     However, they have limited registers and no multiplication instruction, 
+                     making conventional CNN computations difficult to implement. Convolutions must therefore 
+                     be expressed through these basic operations, and Cain helps automate and optimize this process.
+                    <br>
+                </p>
+
+                <div class="project-img-container">
+                        <img src="../asset/project-pic/SCAMP5_RCVL_Ryerson/img0.png" alt="pic1" 
+                        class="SCAMP5-img-type0 ">
+                        <p class="Full-Project-figure-title"><br>SCAMP-5 vision sensor</p>
+                </div>
+
+              <p class="Full-Project-text">
+                    &nbsp;&nbsp;&nbsp;
+                   Convolution combines neighboring pixel values according to the weights in a kernel.
+                    In this example, the current pixel and the pixel above each have a weight of 1, 
+                    while the pixel on the left has a weight of 2. For the pixel in the second row and
+                     second column, the result is 1 + 2 + 2 × 2 = 7. This can also be calculated as 1 +
+                      2 + 2 + 2 = 7, replacing multiplication with repeated addition. Shifting the image 
+                      aligns the required neighboring values, allowing the same calculation to be performed 
+                      across all pixels in parallel. Cain automates this process by compiling convolution 
+                      kernels into SCAMP-5 instructions, such as move, add, subtract, and divide by two. 
+                      It searches backward from the desired kernels to the original image input, exploring
+                       different instruction sequences and reusing common intermediate results. 
+                       The resulting path is then converted into executable code, reducing redundant
+                        computation while working within the hardware’s limited registers.
+                </p>
+
+
+                <div class="project-images-wrapper">
+                    <div class="project-img-container">
+                        <img src="../asset/project-pic/SCAMP5_RCVL_Ryerson/img1.png" alt="pic1" 
+                        class="SCAMP5-img-type1 ">
+                        <p class="Full-Project-figure-title">Multiplier-Free convolution using image shifts and additions</p>
+                    </div>
+                    <div class="project-img-container">
+                        <img src="../asset/project-pic/SCAMP5_RCVL_Ryerson/img2.png" alt="pic2" 
+                        class="SCAMP5-img-type2 ">
+                        <p class="Full-Project-figure-title">Cain generating convolution instructions for the SCAMP-5</p>
+                    </div>
+                </div>
+
+                <p class="Full-Project-text">
+                    &nbsp;&nbsp;&nbsp;
+                 AnalogNavNet is a lightweight CNN designed for robot navigation and collision avoidance using SCAMP-5.
+                  It processes a 256 × 256 grayscale image through three convolutional layers, each followed by ReLU. 
+                  The first layer uses two 3 × 3 kernels to produce two feature maps. The second layer combines these 
+                  through a kernel with two input channels, and the third uses a single 3 × 3 kernel. The trained 
+                  weights are approximated as multiples of 1/8 for multiplier-free computation. Cain generates 
+                  24 instructions for the first layer’s two kernels, 10 and 9 for the second layer’s respective 
+                  input-channel kernels, and 14 for the third layer’s kernel. Average pooling reduces the final
+                   feature map to 8 × 8 before transferring it to the onboard microcontroller. 
+                   A fully connected layer with 30 neurons then feeds two branches that predict left or
+                    right and forward or stop. Training images are labeled as Left, Right, Straight,
+                     and Brake. Left and Right indicate scenes requiring a right turn and a left turn, 
+                     respectively, while Straight and Brake indicate moving forward and stopping. 
+                     These labels teach the network to connect visual features with appropriate navigation actions.
+
+                </p>
+
+                <div class="project-images-wrapper">
+                    <div class="project-img-container">
+                        <img src="/asset/project-pic/SCAMP5_RCVL_Ryerson/img4.png" alt="pic1" 
+                        class="SCAMP5-img-type21 ">
+                        <p class="Full-Project-figure-title">AnalogNavNet and the four training targets</p>
+                    </div>
+                    <div class="project-img-container">
+                        <img src="/asset/project-pic/SCAMP5_RCVL_Ryerson/img5.png" alt="pic2" 
+                        class="SCAMP5-img-type22 ">
+                        <p class="Full-Project-figure-title">Convolutional kernels of AnalogNavNet</p>
+                    </div>
+                </div>
+
+                   <p class="Full-Project-text">
+                    &nbsp;&nbsp;&nbsp;
+                 AnalogNavNet was first trained using labeled images collected from corridor environments in ROS and Gazebo. 
+                 Different wall textures were used to help the network learn varied visual features and to prevent overfitting. The fully connected 
+                 layer initially contained 200 neurons and was later reduced to 30 and retrained for deployment. 
+                 A SCAMP-5 simulator running in ROS was used to check the behavior of Cain-generated instructions. The network was also further trained using real corridor 
+                 images. The figure below compares navigation trajectories at 20, 40, 60, and 80 FPS in simulated corridor
+                  and racetrack environments using the full-floating-point network. Each cross marks a collision. 
+                  Higher frame rates allowed more timely control updates, producing smoother trajectories and fewer
+                   collisions. These experiments demonstrate why fast visual processing matters for robot navigation.
+                </p>
+
+                <div class="project-images-wrapper">
+                    <div class="project-img-container">
+                        <img src="/asset/project-pic/SCAMP5_RCVL_Ryerson/img10.png" alt="pic2" 
+                        class="SCAMP5-img-type23 ">
+                        <p class="Full-Project-figure-title">Trajectory of robot under different FPS in a simulated corridor and a simulated racetrack environment</p>
+                    </div>
+                </div>
+                <p class="Full-Project-text"> The live navigation performance of AnalogNavNet in a simulated obstacle-free corridor is demonstrated in the video below.</p>
+                <br>
+
+                <video width="1500" height="760"
+                    controls autoplay loop muted
+                    style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+                    <source src="/asset/project-pic/SCAMP5_RCVL_Ryerson/SCAMP camera simulator-H264.mp4"
+                    type="video/mp4">
+                </video>
+
+                <p class="Full-Project-figure-title"><br>AnalogNavNet performance in a simulated obstacle-free corridor, 80 FPS</p>
+              
+
+                <p class="Full-Project-text">
+                    <br>&nbsp;&nbsp;&nbsp;
+                Finally, AnalogNavNet was tested on a physical differential-drive mobile robot equipped with an NVIDIA 
+                Jetson Nano and a SCAMP-5 vision sensor in both real corridor and racetrack environments. Over
+                  20 runs, SCAMP-5 achieved an 85% success rate, matching the GPU and
+                   exceeding the VPU’s 80% and CPU’s 60%. Processing benchmarks showed that SCAMP-5 operated at 
+                   85 FPS, compared with 31 FPS for the VPU, 28 FPS for the GPU, and 17 FPS for the CPU. The Jetson 
+                   Nano with SCAMP-5 consumed 58.94 mJ per frame, approximately 15% of the GPU configuration’s
+                    energy per frame.</p>
+
+                    <div class="project-img-container">
+                        <img src="../asset/project-pic/SCAMP5_RCVL_Ryerson/img2.JPG" alt="pic1" 
+                        class="SCAMP5-img-type1 ">
+                        <p class="Full-Project-figure-title">Mobile robot equipped with an NVIDIA Jetson Nano and SCAMP-5 vision sensor</p>
+                    </div>
+
+                  <p class="Full-Project-text">The videos below present the performance of the robot in these two environments.</p>
+
+                 <div class="project-images-wrapper">
+                    <div class="project-img-container">
+                        <video width="700" height="550"
+                            controls autoplay loop muted
+                            style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+                            <source src="/asset/project-pic/SCAMP5_RCVL_Ryerson/video_racetrack.mp4"
+                            type="video/mp4">
+                        </video>
+                        <p class="Full-Project-figure-title"><br>Mobile robot autonomously navigating in a corridor </p>
+                    </div>
+
+                    <div class="project-img-container">
+                        <video width="700" height="550"
+                             controls autoplay loop muted
+                             style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+                              <source src="/asset/project-pic/SCAMP5_RCVL_Ryerson/AnalogNet-real-track.mp4"type="video/mp4">
+                        </video>
+                        <p class="Full-Project-figure-title"><br>Mobile robot autonomously navigating in a racetrack</p>
+                    </div>
+
+                 </div>   
+
+                 <br>
+                 <p class="Full-Project-text"> For more details, please refer to the following publication:<br><br>
+                
+                     <strong style="font-weight: 700;"><em>Stow, E., Ahsan, A., Li, Y. et al. “Compiling CNNs with Cain: focal-plane processing for robot navigation.” Autonomous Robots 46, 893–910 (2022). https://doi.org/10.1007/s10514-022-10053-w</em></strong> </p>
+                <br>
+
+                
+            </div>
+
+            <img 
+            src="/asset/backward.gif" 
+            alt="Arrow icon" 
+            class="icon arrow_back"
+            onclick="Goto('/Projects-HTMLs/Project-more.html')">
+
+            <img
+            src="/asset/backward.gif"
+            alt="Back to projects"
+            class="icon arrow_back_bottom"
+            onclick="Goto('/Projects-HTMLs/Project-more.html')">
+            
+            
+        </section>
+
+        
+        <script src="/script.js"></script>
+
+    </body>
+
+</html>

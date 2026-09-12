@@ -1,0 +1,314 @@
+
+
+/*-----------------------------------------------------------*/
+
+.SCAMP5-img-type0 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 1250px;
+    height: 650px;
+
+}
+
+.SCAMP5-img-type55 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 550px;
+    height: 400px;
+
+}
+
+
+
+.SCAMP5-img-type57 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 470px;
+    height: 400px;
+
+}
+
+.SCAMP5-img-type58 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    width: 470px;
+    height: 400px;
+
+}
+
+.SCAMP5-img-type59 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 470px;
+    height: 400px;
+
+}
+
+.SCAMP5-img-type60 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 1300px;
+    height: 500px;
+
+}
+
+.SCAMP5-img-type61 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 1200px;
+    height: 370px;
+
+}
+
+.SCAMP5-img-type62 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 610px;
+    height: 390px;
+
+}
+
+.SCAMP5-img-type63 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 690px;
+    height: 320px;
+
+}
+
+.SCAMP5-img-type64 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 970px;
+    height: 820px;
+
+}
+
+.SCAMP5-img-type64 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 770px;
+    height: 650px;
+
+}
+
+.SCAMP5-img-type66 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 600px;
+    height: 470px;
+
+}
+
+.SCAMP5-img-type67 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 950px;
+    height: 400px;
+
+}
+
+.SCAMP5-img-type75 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 700px;
+    height: 480px;
+
+}
+
+.SCAMP5-img-type77 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width:600px;
+    height: 400px;
+
+}
+
+.SCAMP5-img-type78 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 780px;
+    height: 440px;
+
+}
+
+.SCAMP5-img-type79 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 700px;
+    height: 440px;
+
+}
+
+.SCAMP5-img-type80 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 780px;
+    height: 450px;
+
+}
+
+.SCAMP5-img-type1 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+
+    width: 450px;
+    height: 570px;
+
+}
+
+.SCAMP5-img-type2 {
+    display: block;
+    margin: 0 auto;
+
+
+    width: 800px;
+    height: 600px; 
+}
+
+
+.SCAMP5-img-type3 {
+    display: block;
+    margin: 0 auto;
+
+
+    width: 750px;
+    height: 400px;    
+}
+
+
+.SCAMP5-img-type4 {
+    display: block;
+    margin: 0 auto;
+
+    width: 780px;
+    height: 600px; 
+}
+
+.SCAMP5-img-type5 {
+    display: block;
+    margin: 0 auto;
+
+    width: 580px;
+    height: 455px; 
+
+    margin-bottom: 8rem;
+}
+
+.SCAMP5-img-type6 {
+    display: block;
+    margin: 0 auto;
+
+    width: 880px;
+    height: 690px; 
+
+    margin-bottom: 1rem;
+}
+
+.SCAMP5-img-type7 {
+    display: block;
+    margin: 0 auto;
+
+    width: 530px;
+    height: 455px; 
+
+    margin-bottom: 3rem;
+}
+
+.SCAMP5-img-type8 {
+    display: block;
+    margin: 0 auto;
+
+    width: 1130px;
+    height: 455px; 
+
+    margin-bottom: 3rem;
+}
+
+.SCAMP5-img-type9 {
+    display: block;
+    margin: 0 auto;
+
+    width: 600px;
+    height: 520px; 
+
+    margin-bottom: 3rem;
+}
+
+
+.SCAMP5-img-type10 {
+    display: block;
+    margin: 0 auto;
+
+    width: 700px;
+    height: 498px; 
+}
+/*-----------------------------------------------------------*/
+
+.project-images-wrapper {
+    display: flex;
+    justify-content: center;  /* keeps them side by side and centered horizontally */
+    align-items: center;      /* align them vertically by their middle */
+    gap: 1rem;                /* spacing between the two */
+}
+
+
+
+.project-img-container {
+    flex: 1;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+/*-----------------------------------------------------------*/
+
+@media screen and (max-width: 1200px) {
+    .project-images-wrapper {
+        flex-direction: column;   
+        align-items: center;      
+    }
+    .project-img-container {
+        width: 80%;   
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project-img-container {
+        width: 100%;   
+        padding: 1rem;
+    }
+    /*--------------*/
+    .SCAMP5-img-type1,
+    .SCAMP5-img-type2,
+    .SCAMP5-img-type3,
+    .SCAMP5-img-type4,
+    .SCAMP5-img-type5,
+    .SCAMP5-img-type6,
+    .SCAMP5-img-type7,
+    .SCAMP5-img-type8,
+    .SCAMP5-img-type9   
+    /*--------------*/
+    {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mediaqueries.css">
+    </head>
+    
+    <!-- Context move in animation -->
+    <script>
+
+    window.addEventListener("DOMContentLoaded", () => {
+    // hard-code all your fade-in element class names
+    const classNames = [
+        ".fade-in-1",
+        ".fade-in-2",
+        ".fade-in-3"
+    ];
+    setTimeout(() => {
+        classNames.forEach(name => {
+        const el = document.querySelector(name);
+        if (el) el.classList.add("visible");
+        });
+    }, 100);
+    });
+
+    </script>
+
+    <body>
+        <nav id="desktop-nav">
+
+            <div class="logo logo-top ">Yingying Li (He/Him)
+                <p class="quote">
+                "You must build up your life action by action, and be content if each one achieves its <br>
+                goal as far as possible—and no one can prevent you from doing this." 
+                <p class="quote">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    - Marcus Aurelius, Meditations </p>
+                
+                <p class="quote">
+                “God, grant me the serenity to accept the things I cannot change,<br>
+                courage to change the things I can, and wisdom to know the difference”.</p>
+                <p class="quote">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    - Reinhold Niebuhr, Serenity Prayer </p>
+
+                <img src="./asset/analyze.png" alt="contact icon"
+                    class="icon-profile2"> 
+                    
+            </div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About </a></li>
+                    <li><a href="#experience">Research Areas</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav id="threebar-nav">
+            <div class="logo">Yingying Li</div>
+            <div class="threebar-menu">
+                <div class="threebar-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About </a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Research Areas</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
+            </div>  
+        </nav>
+        
+        <section id="profile">
+
+            <div class="section__pic-container selfie-profile">
+                <img src="./asset/selfie-profile-modified.png" alt="Yingying profile picture">
+            </div>
+
+            <div class="section__text">
+                <p class ="section__text__p1">Hi there, my name is</p>
+                <h1 class="title">Yingying Li</h1>
+                <!--<h1 class="title">李 盈盈</h1> -->  
+                <p class="section__text__p2">Robotics Researcher</p>
+
+                <div class="btn-container">
+
+                    <!--
+                    <button 
+                    class="btn btn-color-2" 
+                    onclick="window.open('./asset/img2.jpg')">
+                        check this out
+                    </button>
+                     -->  
+                    
+                    <button 
+                    class="btn btn-color-1" 
+                    onclick="location.href='./#contact'">
+                        Contact info
+                    </button>  
+                                
+                </div>
+
+                <div id="socials-container">
+
+                     <!--
+                    <img src="./asset/img4.jpg" alt="My linkedIn profile"
+                    class="icon" onclick="location.href='https://www.youtube.com/'">
+                     -->  
+
+                   <img src="./asset/chat.gif" alt="contact icon"
+                    class="icon-profile">       
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about">
+            <p class="section__text__p1">A bit </p>
+            <h1 class="title">About</h1>
+            <p class="section__text__p1">myself</p>
+
+
+            <div class="section-container">
+                <div class="section__pic-container">
+                    <img src="./asset/self.jpg" alt="About picture" 
+                    class="about-pic">
+                </div>
+
+                <div class="about-details-container">
+                    <div class="about-containers">
+
+                        <div class="details-container">
+                            <img src="./asset/Engineering.gif" alt="Experience icon"
+                            class="icon icon-about">
+                            <h3>Career</h3>
+                            <p> Robotics Engineering <br />Research</p>
+                        </div>
+
+                        <div class="details-container">
+                            <img src="./asset/weightlifting.gif" alt="Education icon"
+                            class="icon icon-about">
+                            <h3>Fitness</h3>
+                            <p> Bodybuilding <br />Weightlifting</p>
+                        </div>
+
+                        <div class="details-container">
+                            <img src="./asset/electric-guitar.gif" alt="Education icon"
+                            class="icon icon-about">
+                            <h3>Music</h3>
+                            <p> R&B <br />Jazz<br />J-pop</p>
+                        </div>
+
+
+                       <div class="details-container">
+                            <img src="./asset/eggs.gif" alt="Education icon"
+                            class="icon icon-about">
+                            <h3>Cuisine</h3>
+                            <p> Italian <br />Chinese<br />Japanese</p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="text-container">
+
+                        <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    My interest in robotics began in 2008 after I watched Iron Man. Since then, I have wanted to build a career in robotics and automation. I hope that one day I can create something just as amazing. I am still working slowly but steadily toward this goal.
+                        Outside of work, I enjoy working out. It gives me a good break and helps me stay physically and mentally active. In my free time, I also enjoy listening to music, especially R&B and similar genres. I am also a big fan of J-pop, and Fujii Kaze is my favorite artist.
+                        I sometimes cook dishes from different cultures. Cleaning up afterward can be a pain, but the joy of cooking and eating the food I love makes it worth the effort. So far, italian food is my favorite!
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <img 
+            src="./asset/down.gif" 
+            alt="Arrow icon" 
+            class="icon arrow"
+            onclick="location.href='./#experience'"
+            >
+     
+        </section>
+
+        <section id="experience">
+            <p class="section__text__p1">Explore my</p>
+            <h1 class="title">Research Areas </h1>
+            <div class="experience-details-container">
+                <div class="about-containers">
+
+                    <div class="details-container">
+                        <h2 class="experience-sub-title">Programming & Tools</h2>
+
+                        <div class="article-container">
+                            <article>
+                                <img 
+                                src="./asset/c-plus-plus.svg" 
+                                alt="Experience Icon"
+                                class="icon icon-exp"
+                                >
+                                <div>
+                                    <h3>C/C++</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>
+
+                             <article>
+                                <img 
+                                src="./asset/python.png" 
+                                alt="Experience Icon"
+                                class="icon icon-exp"
+                                >
+                                <div>
+                                    <h3>Python</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>                               
+
+                             <article>
+                                <img 
+                                src="./asset/matlab.svg" 
+                                alt="Experience Icon"
+                                class="icon icon-exp"
+                                >
+                                <div>
+                                    <h3>Matlab</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>      
+                            
+                            <article>
+                                <img 
+                                src="./asset/solidworks.png" 
+                                alt="Experience Icon"
+                                class="icon icon-exp"
+                                >
+                                <div>
+                                    <h3>Solidworks</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                             <article>
+                                <img 
+                                src="./asset/Arduino.png" 
+                                alt="Experience Icon"
+                                class="icon icon-exp"
+                                >
+                                <div>
+                                    <h3>Arduino</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>                           
+
+                            <article>
+                                <img 
+                                src="./asset/ROS.png" 
+                                alt="Experience Icon"
+                                class="icon icon-exp-2"
+                                >
+                                <div>
+                                    <h3>ROS</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img 
+                                src="./asset/G-code.png" 
+                                alt="Experience Icon"
+                                class="icon icon-exp"
+                                >
+                                <div>
+                                    <h3>G-code</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>               
+                            
+                            
+                             <article>
+                                <img 
+                                src="./asset/luascript.png" 
+                                alt="Experience Icon"
+                                class="icon icon-exp"
+                                >
+                                <div>
+                                    <h3>LuaScript</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>                                
+
+                            <article>
+                                <img 
+                                src="./asset/html.png" 
+                                alt="Experience Icon"
+                                class="icon icon-exp"
+                                >
+                                <div>
+                                    <h3>HTML</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>                             
+
+                        </div>
+                    </div>
+                   
+                    <div class="details-container">
+                        <h2 class="experience-sub-title">Areas of Interest</h2>
+
+                        <div class="article-container">
+                            <article>
+                                <img 
+                                src="./asset/serial-robotarm.png" 
+                                alt="Experience Icon"
+                                class="icon icon-exp-3"
+                                >
+                                <div>
+                                    <h3>Serial Robot</h3>
+                                     <p>Experienced</p> 
+                                </div>
+                            </article>
+
+                            <article>
+                                <img 
+                                src="./asset/Control-system.png" 
+                                alt="Experience Icon"
+                                class="icon icon-exp-3"
+                                >
+                                <div>
+                                    <h3>Control System</h3>
+                                     <p>Experienced</p>
+                                </div>
+                            </article>      
+
+                            <article>
+                                <img 
+                                src="./asset/Parallel-robot.png" 
+                                alt="Experience Icon"
+                                class="icon icon-exp-3"
+                                >
+                                <div>
+                                    <h3>Parallel Robot</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>      
+                            
+                            <article>
+                                <img 
+                                src="./asset/computer vision.png" 
+                                alt="Experience Icon"
+                                class="icon icon-exp-4"
+                                >
+                                <div>
+                                    <h3>Computer Vision</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>      
+                                         
+                            <article>
+                                <img 
+                                src="./asset/Nerual-network.png" 
+                                alt="Experience Icon"
+                                class="icon icon-exp-4"
+                                >
+                                <div>
+                                    <h3>Nerual Network</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>                                
+
+                        </div>
+                    </div>
+
+                </div>
+            </div> 
+
+            <img 
+            src="./asset/down.gif" 
+            alt="Arrow icon" 
+            class="icon arrow"
+            onclick="location.href='./#projects'"
+            >
+
+            <img 
+            src="./asset/up.gif" 
+            alt="Arrow icon" 
+            class="icon arrow_up"
+            onclick="location.href='./#about'"
+            >
+
+        </section>
+
+        <section id="projects" class="fade-in-2">
+            <p class="section__text__p1">Here are my</p>
+            <h1 class="title ">Projects</h1>
+            <div class="experience-details-container">
+                <div class="about-containers ">
+
+
+                    <!-- Project 1-->
+
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./asset/project-pic/SL_Tsinghua_AMREL/img1.png" alt="Project 1" 
+                            class="project-img">
+                        </div>
+                        <div class="article-container">
+                            <img src="./asset/project-pic/SL_Tsinghua_AMREL/img2.png" alt="Project 1" 
+                            class="project-img">
+                        </div>
+                        <h2 class="experience-sub-title project-title">
+                           Dual-adaptive Structured Light 
+                        </h2>
+
+                        <div class="text-container">
+                            <p>
+                                Dual-adaptive structured light method adjusts both projector intensity and camera exposure time, enabling accurate geometric measurement of metal surfaces with varying reflectance.
+                            </p>
+                        </div>   
+                        <div class="btn-container">
+
+                            <button class="btn btn-color-2 project-btn" 
+                            onclick="Goto('Projects-HTMLs/SL_Tsinghua_AMREL.html')">
+                            Details
+                            </button>
+
+                            <!--
+                            <button class="btn btn-color-2 project-btn" 
+                            onclick="location.href=''">
+                            Github
+                            </button>
+                            -->
+
+                        </div>
+
+                    </div>
+
+                    <!-- Project 2-->
+
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./asset/project-pic/PCDPR_RMAL_McMaster/img_1.jpg" alt="Project 1" 
+                            class="project-img"
+                            >
+                        </div>
+                        <h2 class="experience-sub-title project-title">
+                            Pneumatic Cable Driven Parallel Robot (PCDPR)
+                        </h2>
+
+                        <div class="text-container">
+                            <p>
+                            PCDPR uses impedance control and camera guidance to enable fast robotic insertion with low contact forces and torques under position and orientation misalignment.
+                            </p>
+                        </div>   
+                
+                        <div class="btn-container">
+                            
+                            <button class="btn btn-color-2 project-btn" 
+                            onclick="Goto('Projects-HTMLs/PCDPR-RMAL-McMaster.html')">
+                            Details
+                            </button>
+
+                            <!--
+                            <button class="btn btn-color-2 project-btn" 
+                            onclick="location.href=''">
+                            Github
+                            </button>
+                            -->
+
+                        </div>
+
+                    </div>
+
+                    <!-- Project 3-->
+
+                    <div class="details-container color-container">
+                        <div class="article-container">
+
+                            <img src="./asset/project-pic/SCAMP5_RCVL_Ryerson/img1.png" alt="Project 1" 
+                            class="project-img"
+                            >
+
+                            <img src="./asset/project-pic/SCAMP5_RCVL_Ryerson/img2.JPG" alt="Project 1" 
+                            class="project-img"
+                            >
+
+                        </div>
+                        <h2 class="experience-sub-title project-title">
+                            Compiling CNNs with Cain
+                        </h2>
+
+                        <div class="text-container">
+                            <p>
+                           Cain generates efficient, multiplier-free code for multiple convolution kernels by reusing common computations, enabling fast, low-power CNN inference on SCAMP-5 for autonomous navigation.
+                            </p>
+                        </div>   
+                        <div class="btn-container">
+                         
+                        <button class="btn btn-color-2 project-btn" 
+                                onclick="Goto('Projects-HTMLs/SCAMP5-RCVL-Ryerson.html')">
+                        Details
+                        </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Project more-->
+
+                    <div class="details-container color-container">
+
+                        <div class="article-container">
+                            <img src="./asset/idea.gif" alt="Project 1" 
+                            class="project-img"
+                            >
+                        </div>
+
+                        <div class="article-container">
+                            <img src="./asset/projects.gif" alt="Project 1" 
+                            class="project-img"
+                            >
+                        </div>
+
+                        
+                        <div class="btn-container">
+
+                            <button class="btn btn-color-2 project-btn" 
+                            onclick="Goto('Projects-HTMLs/Project-more.html')">
+                            More projects
+                            </button>
+        
+                    </div>
+            </div>
+
+            <img 
+            src="./asset/down.gif" 
+            alt="Arrow icon" 
+            class="icon arrow"
+            onclick="location.href='./#contact'"
+            >
+
+            <img 
+            src="./asset/up.gif" 
+            alt="Arrow icon" 
+            class="icon arrow_up"
+            onclick="location.href='./#experience'"
+            >
+
+        </section>
+
+        <section id="contact">
+            <p class="section__text__p1">Get in touch</p>
+            <h1 class="title">Contact </h1>
+            <p class="section__text__p1">me</p>
+
+            <div class="contact-info-upper-container">
+
+                <!-- Email -->
+                <div class="contact-info-container">
+                    <img 
+                    src="./asset/email.png" 
+                    alt="email icon"
+                    class="icon contact-icon email-icon"
+                    >
+                    <p><a href="mailto:andrewli711528@gmail.com">andrewli711528@gmail.com</a></p>
+                </div>
+
+                <!-- LinkedIn -->
+                <!--<div class="contact-info-container">
+                    <img 
+                    src="./asset/linkedin.png" 
+                    alt="linkedIn icon"
+                    class="icon email-icon"
+                    >
+                    <p><a href="https://www.youtube.com/">LinkedIn</a></p>
+                </div>-->
+
+                <!-- WeChat -->
+                <div class="contact-info-container">
+                    <img 
+                    src="./asset/wechat.png" 
+                    alt="WeChat icon"
+                    class="icon email-icon"
+                    >
+                    <p><a href="#" id="open-qr">WeChat ID : Laz1999528</a></p>
+
+                    <!-- We Chat QR Code Modal -->
+                    <div id="qr-modal" class="qr-modal">
+                        <div class="qr-content">
+                            <span class="qr-close">&times;</span>
+                            <h3>QR Code</h3>
+                            <img src="./asset/WeChat-QR.jpg" alt="WeChat QR" class="qr-image">
+                            <p>Please scan it to add me on WeChat</p>
+                        </div>
+                    </div>
+                </div>               
+
+            </div>
+
+        </section>
+
+        <footer>
+            <nav>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a href="#about">About </a></li>
+                        <li><a href="#experience">Research Areas</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+            <p>Copyright &#169；2026 Yingying Li. All Rights Reserved.
+              <br> Built with modifications from an open source template by 
+              Ademir (YouTube Channel : How to Become a Developer).
+
+            </p>
+        </footer>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
+

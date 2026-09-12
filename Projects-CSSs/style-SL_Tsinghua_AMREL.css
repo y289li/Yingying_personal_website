@@ -1,0 +1,184 @@
+
+/*-----------------------------------------------------------*/
+.SL-img-type0 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    width: 700px;
+    height: 550px;
+}
+
+.SL-img-type111 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    width: 500px;
+    height: 450px;
+}
+
+
+.SL-img-type112 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    width: 550px;
+    height: 250px;
+}
+
+.SL-img-type113 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    width: 1050px;
+    height: 250px;
+}
+
+.SL-img-type114 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    width: 1200px;
+    height: 210px;
+}
+
+.SL-img-type115 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    width: 920px;
+    height: 250px;
+}
+
+.SL-img-type116 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    width: 1120px;
+    height: 250px;
+}
+
+.SL-img-type117 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    width: 1120px;
+    height: 300px;
+}
+
+
+.SL-img-type118 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    width: 1120px;
+    height: 200px;
+}
+
+.SL-img-type119 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    width: 500px;
+    height: 240px;
+}
+
+.SL-img-type120 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    width: 300px;
+    height: 240px;
+}
+
+.SCAMP5-img-type1 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+   
+
+    width: 400px;
+    height: 300px;
+
+}
+
+.SCAMP5-img-type2 {
+    display: block;
+    margin: 0 auto;
+    width: 580px;
+    height: 200px; 
+}
+
+
+.SCAMP5-img-type3 {
+    display: block;
+    margin: 0 auto;
+  
+
+    width:  530px;
+    height: 320px;    
+}
+
+
+.SCAMP5-img-type4 {
+    display: block;
+    margin: 0 auto;
+
+    width: 300px;
+    height: 400px; 
+}
+
+.SCAMP5-img-type21 {
+    display: block;
+    margin: 0 auto;
+    width: 780px;
+    height: 400px; 
+}
+
+.SCAMP5-img-type22 {
+    display: block;
+    margin: 0 auto;
+    width: 480px;
+    height: 290px; 
+}
+
+.SCAMP5-img-type23 {
+    display: block;
+    margin: 0 auto;
+    width: 910px;
+    height: 460px; 
+}
+/*-----------------------------------------------------------*/
+
+.project-images-wrapper {
+    display: flex;
+    justify-content: center;  /* keeps them side by side and centered horizontally */
+    align-items: center;      /* align them vertically by their middle */
+    gap: 1rem;                /* spacing between the two */
+}
+
+
+
+.project-img-container {
+    flex: 1;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+/*-----------------------------------------------------------*/
+
+@media screen and (max-width: 1200px) {
+    .project-images-wrapper {
+        flex-direction: column;   
+        align-items: center;      
+    }
+    .project-img-container {
+        width: 80%;   
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project-img-container {
+        width: 100%;   
+        padding: 1rem;
+    }
+    /*--------------*/
+    .SCAMP5-img-type1,
+    .SCAMP5-img-type2,
+    .SCAMP5-img-type3,
+    .SCAMP5-img-type4  
+    /*--------------*/
+    {
+        width: 100%;
+        height: auto;
+    }
+}

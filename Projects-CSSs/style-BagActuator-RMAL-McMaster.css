@@ -1,0 +1,89 @@
+
+
+/*-----------------------------------------------------------*/
+.SCAMP5-img-type1 {
+    display: block;        /* makes <img> a block element */
+    margin: 0 auto;        /* centers horizontally */
+    border-radius: 1rem;
+
+    width: 450px;
+    height: 330px;
+
+}
+
+.SCAMP5-img-type2 {
+    display: block;
+    margin: 0 auto;
+    border-radius: 1rem;
+
+    width: 720px;
+    height: 670px; 
+}
+
+
+.SCAMP5-img-type3 {
+    display: block;
+    margin: 0 auto;
+    border-radius: 1rem;
+
+    width: 650px;
+    height: 400px;    
+}
+
+
+.SCAMP5-img-type4 {
+    display: block;
+    margin: 0 auto;
+    border-radius: 1rem;
+
+    width: 300px;
+    height: 400px; 
+}
+
+/*-----------------------------------------------------------*/
+
+.project-images-wrapper {
+    display: flex;
+    justify-content: center;  /* keeps them side by side and centered horizontally */
+    align-items: center;      /* align them vertically by their middle */
+    gap: 1rem;                /* spacing between the two */
+}
+
+
+
+.project-img-container {
+    flex: 1;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+/*-----------------------------------------------------------*/
+
+@media screen and (max-width: 1200px) {
+    .project-images-wrapper {
+        flex-direction: column;   
+        align-items: center;      
+    }
+    .project-img-container {
+        width: 80%;   
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project-img-container {
+        width: 100%;   
+        padding: 1rem;
+    }
+    /*--------------*/
+    .SCAMP5-img-type1,
+    .SCAMP5-img-type2,
+    .SCAMP5-img-type3,
+    .SCAMP5-img-type4  
+    /*--------------*/
+    {
+        width: 100%;
+        height: auto;
+    }
+}
